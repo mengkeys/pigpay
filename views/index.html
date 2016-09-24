@@ -1,11 +1,82 @@
 <!DOCTYPE html>
 <html>
   <head>
-    <title><%= title %></title>
+    <title>猪掌柜应用</title>
+    <link type="text/css" rel="stylesheet" href="/amazeui/dist/css/amazeui.min.css">
+    <script type="text/javascript" src="/jquery/dist/jquery.min.js"></script>
+    <script type="text/javascript" src="/amazeui/dist/js/amazeui.min.js"></script>
+    <script type="text/javascript" src="http://res.wx.qq.com/open/js/jweixin-1.0.0.js"></script>
     <link rel='stylesheet' href='/stylesheets/style.css' />
+    <script type="text/javascript" src="/javascripts/app.js"></script>
+   <!-- <script type="text/javascript" src="/javascripts/wechat.js"></script>-->
+    <meta name="viewport" content="width=device-width,minimum-scale=1.0,maximum-scale=1.0,user-scalable=no"/>
   </head>
-  <body>
-    <h1><%= title %></h1>
-    <p>Welcome to <%= title %></p>
+  <body class="bg">
+    <div class="am-g am-g-fixed app-items">
+      <div class="am-u-sm-12 item am-text-center">
+        <a href="javascript:void(0)" type="button" id="qrcode-prompt-toggle">
+          <span class="am-icon-qrcode item-icon"></span>
+          <h3 class="item-title">扫码收款</h3>
+        </a>
+      </div>
+      <div class="am-u-sm-12 item am-text-center">
+        <a href="/search">
+          <span class="am-icon-search item-icon"></span>
+          <h3 class="item-title">订单查询</h3>
+        </a>
+      </div>
+      <div class="am-u-sm-12 item am-text-center">
+        <a href="/bills">
+          <span class="am-icon-list item-icon"></span>
+          <h3 class="item-title">对帐单</h3>
+        </a>
+      </div>
+    </div>
+    <div data-am-widget="navbar" class="am-navbar am-cf am-navbar-default "
+         id="">
+      <ul class="am-navbar-nav am-cf am-avg-sm-6">
+
+        <li>
+          <a href="/" class="">
+            <span class="am-icon-th-large"></span>
+            <span class="am-navbar-label">应用</span>
+          </a>
+        </li>
+        <li>
+          <a href="/system" class="">
+            <span class="am-icon-info-circle"></span>
+            <span class="am-navbar-label">系统</span>
+          </a>
+        </li>
+        <li >
+          <a href="tel:15280083437" class="">
+            <span class="am-icon-phone"></span>
+            <span class="am-navbar-label">客服</span>
+          </a>
+        </li>
+      </ul>
+    </div>
+
+    <div class="am-modal am-modal-prompt" tabindex="-1" id="qrcode-prompt-modal">
+      <div class="am-modal-dialog">
+        <div class="am-modal-hd">猪掌柜应用</div>
+        <div class="am-modal-bd">
+          请输入您的收款金额
+          <form action="" class="am-form am-form-inline">
+            <div class="am-form-group am-form-icon">
+              <i class="am-icon-rmb"></i>
+              <input type="number" class="am-form-field" id="money" step="0.01" min="0.01" placeholder="金额">
+            </div>
+<!--            <div class="am-form-group">
+              <button type="button" class="am-btn am-btn-primary am-radius am-btn-block">发起收款</button>
+            </div>-->
+          </form>
+        </div>
+        <div class="am-modal-footer">
+          <span class="am-modal-btn" data-am-modal-cancel>取消</span>
+          <span class="am-modal-btn" data-am-modal-confirm>提交</span>
+        </div>
+      </div>
+    </div>
   </body>
 </html>

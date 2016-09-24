@@ -1,0 +1,20 @@
+{
+  "name": "pigpay",
+  "description": "",
+  "main": "",
+  "authors": [
+    "mengkeys <mengkeys@hotmail.com>"
+  ],
+  "license": "MIT",
+  "homepage": "https://github.com/mengkeys/pigpay",
+  "ignore": [
+    "**/.*",
+    "node_modules",
+    "bower_components",
+    "test",
+    "tests"
+  ],
+  "dependencies": {
+    "amazeui": "^2.7.2"
+  }
+}
