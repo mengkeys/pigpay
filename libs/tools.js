@@ -34,3 +34,7 @@ exports.signature = function (obj) {
 exports.format = function (time) {
     return moment(time).format('YYYY年MM月DD日 h时mm分ss秒');
 };
+
+exports.ip = function (param) {
+  return param.split(':').pop();
+};

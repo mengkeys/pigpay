@@ -3,12 +3,13 @@
   margin: 0;
   border: none;
 }
-
+.primary-bg{
+  background-color:#0e90d2;
+}
 .app-items .item{
-  height: 200px;
   background-color:#0e90d2;
   color:white;
-  margin-bottom:5px;
+  margin-bottom:4px;
 }
 
 .app-items .item a, .app-items .item a:hover, .app-items .item a:active{
@@ -20,11 +21,48 @@
   margin-bottom:0;
 }
 
+/* 偶数 */
+.app-items .item-s:nth-last-child(even){
+  /*margin-left:-2px;*/
+  border-right: 2px solid white;
+}
+
+/* 奇数 */
+.app-items .item-s:nth-last-child(odd){
+  /*margin-right:-2px;*/
+  border-left: 2px solid white;
+}
+
 .app-items .item .item-icon{
-  font-size: 100px;
+  font-size: 40px;
 }
 
 .app-items .item .item-title{
-  font-size:24px;
+  font-size:16px;
   margin-top:-1rem;
+}
+
+.app-footer{
+  font-size:16px;
+}
+
+.app-footer p{
+  margin-bottom: 3px;
+  margin-top:3px;
+}
+
+.am-navbar-nav{
+  border-top: 4px solid white;
+}
+
+.am-with-fixed-navbar {
+  padding-bottom: 44px; !important;
+}
+
+.app-items .app-full{
+  border:none; !important;
+}
+
+textarea{
+  resize: none;
 }
